@@ -1,0 +1,16 @@
+    if ((s4dmessage.content) == 's!regole') {
+    s4dmessage.channel.send(
+            {
+                embed: {
+                    title: '⬆ ⬆ ⬆ ⬆ ⬆ ⬆',
+                    color: '#ff9900',
+                    image: { url: null },
+
+                    description: 'Clicca [qui](https://discord.com/channels/785282846246830121/856860737698922546/856860923322302494) per tornare sopra',
+                    footer: { text: null },
+                    thumbnail: { url: null }
+
+                }
+            }
+        );
+  }

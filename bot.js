@@ -48,7 +48,7 @@ s4d.client.on('message', async (s4dmessage) => {
         );
   }
 
-    if ((s4dmessage.content) == 'Saturpedia cosa fai?') {
+  if ((s4dmessage.content) == 'Saturpedia cosa fai?') {
     s4dmessage.channel.send(String('Rispondo ai comandi.'));
   }
   if ((s4dmessage.content) == 'Saturpedia quanti anni hai?') {
@@ -111,6 +111,12 @@ s4d.client.on('message', async (s4dmessage) => {
   if ((s4dmessage.content) == 'Saturpedia fai schifo') {
     s4dmessage.channel.send(String('A differenza tua non sono ammuffito.'));
   }
+  if ((s4dmessage.content) == 'Ho voglia di cazzo') {
+    s4dmessage.channel.send(String('https://it.pornhub.com/gayporn'));
+  }
+  if ((s4dmessage.content) == 'ho voglia di cazzo') {
+    s4dmessage.channel.send(String('https://it.pornhub.com/gayporn'));
+  }
 
 });
 
@@ -122,6 +128,8 @@ s4d.client.on('ready', async () => {
   s4d.client.user.setActivity(String('mettere in ordine i documenti'));
   await delay(Number(30)*1000);
   s4d.client.user.setActivity(String('eliminare i libri falsificati'));
+  await delay(Number(30)*1000);
+  s4d.client.user.setActivity(String('calcolare come prendere il posto di Saturno...'));
   await delay(Number(30)*1000);
 });
 
