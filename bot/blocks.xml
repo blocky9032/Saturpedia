@@ -1,0 +1,84 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="s4d_login" id=")O7+PL3eS1Br}h;?X9N$" x="288" y="163">
+    <value name="TOKEN">
+      <block type="text" id="a7JxIIyK[Yr~TPL^-{W:">
+        <field name="TEXT">ODkyMzIzNTQwNDMzNTM0OTg2.YVLPDg.jbuNqvaWKDSSc-DDIYj6bCpZOzY</field>
+      </block>
+    </value>
+  </block>
+  <block type="s4d_on_message" id="Qx+aIDM=_,mj^tl$vGmW" x="288" y="238">
+    <statement name="STATEMENTS">
+      <block type="controls_if" id="Cr$f.P2*Nq2Dl}?D!r`(">
+        <value name="IF0">
+          <block type="logic_compare" id="oq-Tf{oSnv,],{N*FSF|">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="s4d_message_content" id="pyFMNvR6J#o6Ky/UA~]f"></block>
+            </value>
+            <value name="B">
+              <block type="text" id=";[??XKp36YJf2U}j2_}e">
+                <field name="TEXT">Secondo me Saturpedia è gay</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="s4d_reply" id="wgo^7yFoMz,K{AaMl6L)">
+            <value name="CONTENT">
+              <block type="text" id="N-4C!JnJCe,s$75i%8Ce">
+                <field name="TEXT">Sono un bot, non ho alcun tipo di preferenza sessuale :/</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_connected" id="[ey$,!Xl+V6A48_31Teo" x="1063" y="276">
+    <statement name="STATEMENTS">
+      <block type="s4d_set_bot_game" id="nBvrBMoHew6yg+`BUo54">
+        <value name="GAME">
+          <block type="text" id="*Ie/r=+XOJ{@3DmR}/rr">
+            <field name="TEXT">Saturpedia</field>
+          </block>
+        </value>
+        <next>
+          <block type="s4d_wait_seconds" id="AEJl6-bLF06(vW1u_dB(">
+            <value name="TIME">
+              <shadow type="math_number" id="V-!_|kWR$_-*JpoFRRUp">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="s4d_set_bot_game" id="fX+Crb_0BXGjlbA`tC]8">
+                <value name="GAME">
+                  <block type="text" id="sk]nO?^SO3=UGQLh,Xl9">
+                    <field name="TEXT">Wikipedia</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="s4d_wait_seconds" id="{^Nz#b5KD}R68}ZeAXf)">
+                    <value name="TIME">
+                      <shadow type="math_number" id="#r=zKIx:z,=B:i^HbgHT">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="s4d_set_bot_game" id="wFaRG78g}xR:-58+)~a8">
+                        <value name="GAME">
+                          <block type="text" id="ce20d)0*%9qDTJ@e[8cQ">
+                            <field name="TEXT">Saturpedia</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
