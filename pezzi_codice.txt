@@ -14,3 +14,18 @@
             }
         );
   }
+
+  if ((s4dmessage.content) == 'Ho voglia di cazzo') {
+    s4dmessage.channel.send(String('https://it.pornhub.com/gayporn'));
+  }
+  if ((s4dmessage.content) == 'ho voglia di cazzo') {
+    s4dmessage.channel.send(String('https://it.pornhub.com/gayporn'));
+  }
+  if ((s4dmessage.content) == 'Ho voglia di figa') {
+    s4dmessage.channel.send(String('https://it.pornhub.com/'));
+  }
+  if ((s4dmessage.content) == 'ho voglia di figa') {
+    s4dmessage.channel.send(String('https://it.pornhub.com/'));
+  }
+
+
