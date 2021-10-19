@@ -1,8 +1,21 @@
+//- - - - - - - - - - - - - - - - - - - - - - - - - -//
+// Sezioni:                                          //
+// //--// = Cod. Necessario per il bot (non toccare) //
+// // Saturpedia HELP COMMAND //                     //
+// // Saturpedia COMMANDS //                         //
+// // Saturpedia AUDIO COMMANDS //                   //
+// // Saturpedia ADMIN COMMANDS //                   //
+// // Saturpedia SPECIAL COMMANDS //                 //
+// // Saturpedia STATUS //                           //
+//- - - - - - - - - - - - - - - - - - - - - - - - - -//
 
+//--//
 (async () => {
   const keepAlive = require("./server.js")
   const Discord = require("discord.js");
   const Database = require("easy-json-database");
+  const path = require('path')
+  const ffmpeg = require("ffmpeg")
   const devMode = typeof __E_IS_DEV !== "undefined" && __E_IS_DEV;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const s4d = {
@@ -23,15 +36,16 @@
   });
 
   await s4d.client.login(process.env['TOKEN']).catch((e) => { s4d.tokenInvalid = true; s4d.tokenError = e; });
-
-  keepAlive()
+//--//
+  keepAlive() // Questa funzione tiene il bot 24/24 //
   console.log('Il codice "bot.js" è partito')
   console.log('Connessione a Discord...')
   console.log('Autenticato come "Saturpedia#2025"')
   console.log('Moduli stato bot in caricamento')
-
+//--//
   s4d.client.on('message', (s4dmessage) => {
     (async () => {
+//--//
 
 // Saturpedia HELP COMMAND //
 
@@ -43,7 +57,7 @@
               color: '#ff9900',
               image: { url: null },
 
-              description: '***Comandi - Aiuto***\n*(Il comando qua sotto evoca questa lista)*\nSaturpedia\n***Comandi - Domande***\nSaturpedia cosa fai?\nSaturpedia quanti anni hai?\nSaturpedia come ti chiami?\nSaturpedia sei maschio o femmina?\nSaturpedia sei eterosessuale?\nSaturpedia sei omosessuale?\n***Comandi - Insulti***\nSaturpedia sei inutile\nSaturpedia sei uno stronzo\nSaturpedia sei un bastardo\nSaturpedia sei in mezzo alle palle\nSaturpedia sei ritardato\nSaturpedia sei un aborto\nSaturpedia sei sempre in mezzo ai coglioni\nSaturpedia ti hanno pensato male\nSaturpedia ti stermino\nSaturpedia ti hanno sviluppato male\nSaturpedia non lavori abbastanza\nSaturpedia non dovevi nascere\nSaturpedia fai cagare\nSaturpedia fai cagare al cazzo\nSaturpedia fai schifo',
+              description: '***Comandi - Aiuto***\n*(Il comando qua sotto evoca questa lista)*\nSaturpedia\n***Comandi - Domande***\nSaturpedia cosa fai?\nSaturpedia quanti anni hai?\nSaturpedia come ti chiami?\nSaturpedia sei maschio o femmina?\nSaturpedia sei eterosessuale?\nSaturpedia sei omosessuale?\n***Comandi - Insulti***\nSaturpedia sei inutile\nSaturpedia sei uno stronzo\nSaturpedia sei un bastardo\nSaturpedia sei in mezzo alle palle\nSaturpedia sei ritardato\nSaturpedia sei un aborto\nSaturpedia sei sempre in mezzo ai coglioni\nSaturpedia ti hanno pensato male\nSaturpedia ti stermino\nSaturpedia ti hanno sviluppato male\nSaturpedia non lavori abbastanza\nSaturpedia non dovevi nascere\nSaturpedia fai cagare\nSaturpedia fai cagare al cazzo\nSaturpedia fai schifo\n***Comandi - Audio***\n*(I comandi elencati qua sotto verranno eseguiti se si è in un canale vocale)*\nSaturpedia insultami\nSaturpedia errorizzami\nSaturpedia stellarizzami un pò\nSaturpedia cosa pensi di bello?\n*Il comando qua sotto fa disconnettere il bot dalla chiamata*\nSaturpedia fermati',
               footer: { text: null },
               thumbnail: { url: null }
 
@@ -52,6 +66,8 @@
         );
 
       }
+
+
 
 // Saturpedia COMMANDS //
 
@@ -119,12 +135,118 @@
         s4dmessage.channel.send(String('A differenza tua non sono ammuffito.'));
       }
 
+// Saturpedia AUDIO COMMANDS //
+
+        if ((s4dmessage.content) == 'Saturpedia fermati') {
+          const { voice } = s4dmessage.member
+
+          //if (!voice.channelID) {
+          //  s4dmessage.reply('Devi essere in un canale vocale 😑')
+          //  return
+          //}
+          voice.channel.leave()
+          s4dmessage.reply('Okay')
+      }
+        if ((s4dmessage.content) == 'Saturpedia insultami') {
+          const { voice } = s4dmessage.member
+
+          if (!voice.channelID) {
+            s4dmessage.reply('Devi essere in un canale vocale 😑')
+            return
+          }
+
+          voice.channel.join().then((connection) => {
+            connection.play(path.join(__dirname, 'reply_1.mp3'))
+          })
+          await delay(Number(7) * 1000);
+          voice.channel.leave()
+      }
+        if ((s4dmessage.content) == 'Saturpedia errorizzami') {
+          const { voice } = s4dmessage.member
+
+          if (!voice.channelID) {
+            s4dmessage.reply('Devi essere in un canale vocale 😑')
+            return
+          }
+
+          voice.channel.join().then((connection) => {
+            connection.play(path.join(__dirname, 'reply_2.mp3'))
+          })
+          await delay(Number(4) * 1000);
+          voice.channel.leave()
+          //s4dmessage.reply('Non ho ancora degli script che mi permettano di pensare, scusa 😪')
+      }
+        if ((s4dmessage.content) == 'Saturpedia stellarizzami un pò') {
+          const { voice } = s4dmessage.member
+
+          if (!voice.channelID) {
+            s4dmessage.reply('Devi essere in un canale vocale 😑')
+            return
+          }
+
+          voice.channel.join().then((connection) => {
+            connection.play(path.join(__dirname, 'reply_3.mp3'))
+          })
+      }
+        if ((s4dmessage.content) == 'Saturpedia cosa pensi di bello?') {
+          const { voice } = s4dmessage.member
+
+          if (!voice.channelID) {
+            s4dmessage.reply('Devi essere in un canale vocale 😑')
+            return
+          }
+
+          voice.channel.join().then((connection) => {
+            connection.play(path.join(__dirname, 'reply_4.mp3'))
+          })
+          await delay(Number(21) * 1000);
+          voice.channel.leave()
+      }
+
+
 // Saturpedia ADMIN COMMANDS //
 
       if ((s4dmessage.author.id) == '430656019949944833') {
         if ((s4dmessage.content) == 'Saturpedia! ping') {
           s4dmessage.channel.send(String((s4d.client.ws.ping)));
         }
+
+        if ((s4dmessage.content) == 'Saturpedia! status') {
+        s4dmessage.channel.send(
+          {
+            embed: {
+              title: 'Working!',
+              color: '#00ff1a',
+              image: { url: null },
+
+              description: 'Working! No errors!',
+              footer: { text: null },
+              thumbnail: { url: "https://static.vecteezy.com/system/resources/previews/001/200/277/non_2x/check-png.png" }
+
+            }
+          }
+        );
+
+      }
+
+       if ((s4dmessage.content) == 'Saturpedia! fix') {
+        s4dmessage.channel.send(
+          {
+            embed: {
+              title: 'Done!',
+              color: '#ff000d',
+              image: { url: null },
+
+              description: 'The bot restarted!\nAll errors are now fixed.',
+              footer: { text: null },
+              thumbnail: { url: "https://static.vecteezy.com/system/resources/previews/001/200/277/non_2x/check-png.png" }
+
+            }
+          }
+        );
+
+      }
+
       }
 
 // Saturpedia SPECIAL COMMANDS //
@@ -506,45 +628,377 @@ s4dmessage.channel.send(
 );
 }
 
+      if ((s4dmessage.content) == 'A VADA CHE LONE SIA FROCIEN') {
+        s4dmessage.channel.send(
+          {
+            embed: {
+              title: 'Attenzione! Non inviare alcun messaggio durante questa operazione delicata!',
+              color: '#f54242',
+              image: { url: null },
+              description: '**In avvio tra 10 secondi...**',
+              footer: { text: null },
+              thumbnail: { url: null }
 
-if ((s4dmessage.content) == 'Saturpedia fai diventare Stefano infemminato') {
-  s4dmessage.channel.send(String('Attenzione! Il soggetto è di classe "etero". Potrebbe malfunzionare durante il processo.'));
-  s4dmessage.channel.send(String('Soggetto numero #8907 estratto dalla sua capsula. In funzione tra 5 secondi...'));
-  await delay(Number(5) * 1000);
-  s4dmessage.channel.send(String('Preparazione anestesia totale...'));
+            }
+          }
+        );
+        await delay(Number(10) * 1000);
+        (s4dmessage.channel).bulkDelete((1 | 1))
+      
+      s4dmessage.channel.send(
+        {
+          embed: {
+            title: 'PREPARAZIONE - FASE 1/2',
+            color: '#f54242',
+            image: { url: null },
+            description: '**Avvio...**',
+            footer: { text: null },
+            thumbnail: { url: null }
+
+          }
+        }
+      );
+      await delay(Number(2) * 1000);
+      (s4dmessage.channel).bulkDelete((1 | 1))
+    s4dmessage.channel.send(
+      {
+        embed: {
+          title: 'PREPARAZIONE - FASE 1/2',
+          color: '#f54242',
+          image: { url: null },
+          description: '**Estrazione della vittima...** `1%`',
+          footer: { text: null },
+          thumbnail: { url: null }
+
+        }
+      }
+    );
+    await delay(Number(7) * 1000);
+    (s4dmessage.channel).bulkDelete((1 | 1))
+
+    s4dmessage.channel.send(
+    {
+      embed: {
+        title: 'PREPARAZIONE - FASE 1/2',
+        color: '#f54242',
+        image: { url: null },
+        description: '**Estrazione della vittima...** `33%`',
+        footer: { text: null },
+        thumbnail: { url: null }
+
+      }
+    }
+  );
   await delay(Number(3) * 1000);
-  s4dmessage.channel.send(String('Anestesia totale in corso...'));
-  await delay(Number(7) * 1000);
-  s4dmessage.channel.send(String('Soggetto incoscente.'));
-  await delay(Number(1) * 1000);
-  s4dmessage.channel.send(String('Applicazione del trucco (Fondotinta)...'));
-  await delay(Number(2) * 1000);
-  s4dmessage.channel.send(String('Applicazione del trucco (Correttore)...'));
-  await delay(Number(2) * 1000);
-  s4dmessage.channel.send(String('Applicazione del trucco (Cipria trasparente)...'));
-  await delay(Number(2) * 1000);
-  s4dmessage.channel.send(String('Applicazione del trucco (Contouring)...'));
-  await delay(Number(2) * 1000);
-  s4dmessage.channel.send(String('Applicazione del trucco (Blush)...'));
-  await delay(Number(2) * 1000);
-  s4dmessage.channel.send(String('Applicazione delle ciglia finte...'));
-  await delay(Number(2) * 1000);
-  s4dmessage.channel.send(String('Applicazione eyeliner e ombretto...'));
-  await delay(Number(2) * 1000);
-  s4dmessage.channel.send(String('Rimozione dei vestiti (Boxer)...'));
-  await delay(Number(5) * 1000);
-  s4dmessage.channel.send(String('Indossando al soggetto i vestiti (Completo donna delle pulizie anni 1990)...'));
-  await delay(Number(10) * 1000);
-  s4dmessage.channel.send(String('Fatto!'));
-  await delay(Number(10) * 1000);
-  s4dmessage.channel.send(String('_(Voglio far sapere a Stefano di non prendersela.)_'));
-  await delay(Number(10) * 1000);
   (s4dmessage.channel).bulkDelete((1 | 1))
+    s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 1/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Estrazione della vittima...** `50%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(1) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 1/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Estrazione della vittima...** `69%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(1) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 1/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Estrazione della vittima...** `100%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(3) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 2/2',
+      color: '#f54242',
+      image: { url: null },
+      description: 'Fase 1 completata.',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(5) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 2/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Denudazione della vittima...** `1%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(5) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 2/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Denudazione della vittima...** `5%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(2) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 2/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Denudazione della vittima...** `23%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(9) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 2/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Denudazione della vittima...** `56%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(1) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 2/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Denudazione della vittima...** `69%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(8) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 2/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Denudazione della vittima...** `79%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(6) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 2/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Denudazione della vittima...** `100%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(3) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'PREPARAZIONE - FASE 2/2',
+      color: '#f54242',
+      image: { url: null },
+      description: 'Fase 2 completata.',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(5) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'ESECUZIONE - FASE 1/2',
+      color: '#f54242',
+      image: { url: null },
+      description: '**Veloce backup di Lone...** `Nuovo punto di rispristino creato`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(5) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'ESECUZIONE - FASE 2/2',
+      color: '#40ff00',
+      image: { url: null },
+      description: '**Ignezione di "Gayismo2021"...** `1%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(5) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'ESECUZIONE - FASE 2/2',
+      color: '#40ff00',
+      image: { url: null },
+      description: '**Ignezione di "Gayismo2021"...** `2%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(8) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'ESECUZIONE - FASE 2/2',
+      color: '#40ff00',
+      image: { url: null },
+      description: '**Ignezione di "Gayismo2021"...** `15%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(6) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'ESECUZIONE - FASE 2/2',
+      color: '#40ff00',
+      image: { url: null },
+      description: '**Ignezione di "Gayismo2021"...** `39%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(4) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'ESECUZIONE - FASE 2/2',
+      color: '#40ff00',
+      image: { url: null },
+      description: '**Ignezione di "Gayismo2021"...** `69%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(3) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'ESECUZIONE - FASE 2/2',
+      color: '#40ff00',
+      image: { url: null },
+      description: '**Ignezione di "Gayismo2021"...** `100%`',
+      footer: { text: null },
+      thumbnail: { url: null }
+
+    }
+  }
+);
+await delay(Number(7) * 1000);
+(s4dmessage.channel).bulkDelete((1 | 1))
+s4dmessage.channel.send(
+  {
+    embed: {
+      title: 'Finished',
+      color: '#9d00ff',
+      image: { url: null },
+      description: '**Lone è ora gay**',
+      footer: { text: null },
+      thumbnail: { url: "https://cdn.discordapp.com/attachments/785284163007414322/857202010725679114/gay.png" }
+
+    }
+  }
+);
 }
+
+//--//
   }
               ) ()
   .catch(console.log);
 });
+//--//
+
+// Saturpedia STATUS //
 
 s4d.client.on('ready', async () => {
   s4d.client.user.setActivity(String('consultare le librerie'));
@@ -559,6 +1013,7 @@ s4d.client.on('ready', async () => {
   await delay(Number(30) * 1000);
 });
 
-
+//--//
 return s4d;
                 }) ();
+//--//
