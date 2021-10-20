@@ -262,6 +262,8 @@
       }
       if ((s4dmessage.content) == 'ho voglia di figa') {
         s4dmessage.channel.send(String('https://it.pornhub.com/'));
+                await delay(Number(10) * 1000);
+        s4dmessage.channel.edit(String('Cazzo so se funziona de'));
       }
 
       
@@ -621,7 +623,7 @@ s4dmessage.channel.send(
       image: { url: null },
       description: '**Redolfino è ora gay**',
       footer: { text: null },
-      thumbnail: { url: "https://cdn.discordapp.com/attachments/857946130742640661/898648520045764690/gay.png" }
+      thumbnail: { url: "https://cdn.discordapp.com/attachments/885976580696973424/898979798746021928/Redolfino_bello.png" }
 
     }
   }
