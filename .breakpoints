@@ -2,34 +2,64 @@
   "files": {
     "bot.js": [
       {
-        "id": "472e0b9b-f0fc-43ed-a467-150fe4484618",
-        "line": 72,
-        "version": 6871,
-        "index": 3478
+        "id": "a60031f4-c2ca-4491-a8a8-07471d7a30ec",
+        "line": 1,
+        "version": 8355,
+        "index": 0
       },
       {
-        "id": "a04d9202-8899-4656-a27d-c53b71931a02",
+        "id": "0deccde0-332c-46aa-8cbf-06bc2db46ae5",
+        "line": 12,
+        "version": 8355,
+        "index": 561
+      },
+      {
+        "id": "ae8659c6-775d-4370-94f3-88129dbf0a32",
+        "line": 52,
+        "version": 8355,
+        "index": 2092
+      },
+      {
+        "id": "02f0d346-9111-45ca-8158-719722db874a",
         "line": 74,
-        "version": 6871,
-        "index": 3511
+        "version": 8355,
+        "index": 3756
       },
       {
-        "id": "8c865e3d-34af-4593-8f9f-581061fd2c3e",
-        "line": 76,
-        "version": 6871,
-        "index": 3636
+        "id": "ff522d7c-0cf7-4a6d-90d3-08b781943b06",
+        "line": 160,
+        "version": 8355,
+        "index": 7504
       },
       {
-        "id": "22615097-229c-46cf-bcd0-d07238038ce0",
-        "line": 80,
-        "version": 6871,
-        "index": 3876
+        "id": "217a9ace-f4c2-44d9-9c67-af71696fb58e",
+        "line": 279,
+        "version": 8355,
+        "index": 11587
       },
       {
-        "id": "8454ddce-f02a-4a53-8929-a6994584c597",
-        "line": 85,
-        "version": 6871,
-        "index": 4194
+        "id": "8ba1be52-cb27-4983-857c-da43b1970086",
+        "line": 324,
+        "version": 8355,
+        "index": 12862
+      },
+      {
+        "id": "b6054700-0ca0-48a6-aff0-74a3097da2ce",
+        "line": 1087,
+        "version": 8355,
+        "index": 31198
+      },
+      {
+        "id": "85f339f2-e9c7-4a70-8979-f54e8ba2de28",
+        "line": 1094,
+        "version": 8355,
+        "index": 31263
+      },
+      {
+        "id": "bf2bd40c-25b2-47f0-ab4a-963d227f0da2",
+        "line": 1109,
+        "version": 8355,
+        "index": 31876
       }
     ]
   }
