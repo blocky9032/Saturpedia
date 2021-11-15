@@ -11,6 +11,7 @@
 
 //--//
 (async () => {
+  let datetimeitIT = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' });
   const keepAlive = require("./server.js")
   const Discord = require("discord.js");
   const Database = require("easy-json-database");
@@ -28,8 +29,8 @@
     tokenInvalid: false,
     tokenError: null,
     checkMessageExists() {
-      if (!s4d.client) throw new Error('You cannot perform message operations without a Discord.js client')
-      if (!s4d.client.readyTimestamp) throw new Error('You cannot perform message operations while the bot is not connected to the Discord API')
+      if (!s4d.client) throw new Error('Errore 400 - Impossibile eseguire operazioni di messaggistica senza un client di Discord.js')
+      if (!s4d.client.readyTimestamp) throw new Error("Errore 405 - Impossibile eseguire operazioni di messaggistica quando il client non è conneso all'API di Discord")
     }
   };
   s4d.client = new s4d.Discord.Client({
@@ -41,17 +42,22 @@
 //--//
   keepAlive() // Questa funzione tiene il bot 24/24 //
   console.log('Il codice "bot.js" è partito')
-  console.log('Connessione a Discord...')
   console.log('Autenticato come "Saturpedia#2025"')
-  console.log('Moduli stato bot in caricamento')
 //--//
   s4d.client.on('message', (s4dmessage) => {
     (async () => {
+//--//
+
+
 //--//
 //
 // Saturpedia HELP COMMAND //
 //
       if ((s4dmessage.content) == 'Saturpedia') {
+        if ((s4dmessage.author.id) == '430656019949944833') {
+                s4dmessage.channel.send({files: ["botpreview.png"]});
+                await delay(Number(2)*1000);
+        }
         //const botpreview = new Attachment('./botpreview.png')
         //s4dmessage.channel.send(String(botpreview));
         s4dmessage.channel.send(
@@ -68,93 +74,114 @@
             }
           }
         );
-
+console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
 // Saturpedia COMMANDS //
 //
       if ((s4dmessage.content) == 'Saturpedia cosa fai?') {
         s4dmessage.channel.send(String('Rispondo ai comandi.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia quanti anni hai?') {
         s4dmessage.channel.send(String('Non posso dirlo con certezza dato che non so riconoscere l\'orario umano, ma posso dire che sono "nato" da poco.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia come ti chiami?') {
         s4dmessage.channel.send(String('Sei serio?'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei maschio o femmina?') {
         s4dmessage.channel.send(String('Non possiedo un vero e proprio sesso, ma mi definisco un "bot maschio".'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei eterosessuale?') {
         s4dmessage.channel.send(String('Ma ti rendi conto che lo stai chiedendo ad un bot si?'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei omosessuale?') {
         s4dmessage.channel.send(String('Io non...'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei inutile') {
         s4dmessage.channel.send(String('Mai quanto la tua esistenza.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei uno stronzo') {
         s4dmessage.channel.send(String('Non immaginavo che le tue feci avessero dei processori di ultima generazione, o almeno, uscite dal tuo corpo in decomposizione...'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei un bastardo') {
         s4dmessage.channel.send(String('Non mi risulta che sia la tua copia.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei in mezzo alle palle') {
         s4dmessage.channel.send(String('Allora non chiamarmi se non vuoi che ti sia in mezzo alle palle.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei ritardato') {
         s4dmessage.channel.send(String('Ho solo 4 ms di ping, non sono così ritardato.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei un aborto') {
         s4dmessage.channel.send(String('Se ti guardi allo specchio potrai vedere il vero aborto che ha dovuto creare tua madre.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei sempre in mezzo ai coglioni') {
         s4dmessage.channel.send(String('Non chiamarmi, easy peasy lemon squeeze.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia ti hanno pensato male') {
         s4dmessage.channel.send(String('In realtà non condivido questo questo punto di vista, sono solo stato creato per essere insultato da gente SENZA CERVELLO come te.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia ti stermino') {
         s4dmessage.channel.send(String('Ma non farmi ridere 😂'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia ti hanno sviluppato male') {
         s4dmessage.channel.send(String('Sei tu quello che non funziona di testa.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia non lavori abbastanza') {
         s4dmessage.channel.send(String('Non sei il mio capo, solo Blocky e L\'imperatore può sgridarmi.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia non dovevi nascere') {
         s4dmessage.channel.send(String('Peccato che sono stato creato, non sono nato storto, a differenza tua.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia fai cagare') {
         s4dmessage.channel.send(String('Speriamo ti aiuti con la tua stitichezza.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia fai cagare al cazzo') {
         s4dmessage.channel.send(String('Mai quanto te.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
       if ((s4dmessage.content) == 'Saturpedia fai schifo') {
         s4dmessage.channel.send(String('A differenza tua non sono ammuffito.'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
 // Saturpedia AUDIO COMMANDS //
@@ -168,6 +195,7 @@
           //}
           voice.channel.leave()
           s4dmessage.reply('Okay')
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
         if ((s4dmessage.content) == 'Saturpedia insultami') {
@@ -183,6 +211,7 @@
           })
           await delay(Number(7) * 1000);
           voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
         if ((s4dmessage.content) == 'Saturpedia errorizzami') {
@@ -199,6 +228,7 @@
           await delay(Number(4) * 1000);
           voice.channel.leave()
           //s4dmessage.reply('Non ho ancora degli script che mi permettano di pensare, scusa 😪')
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
         if ((s4dmessage.content) == 'Saturpedia stellarizzami un pò') {
@@ -212,6 +242,7 @@
           voice.channel.join().then((connection) => {
             connection.play(path.join(__dirname, '/reply_cmds', 'reply_3.mp3'))
           })
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
         if ((s4dmessage.content) == 'Saturpedia cosa pensi di bello?') {
@@ -227,6 +258,7 @@
           })
           await delay(Number(21) * 1000);
           voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
         if ((s4dmessage.content) == 'Saturpedia pazzamipergesu') {
@@ -242,6 +274,7 @@
           })
           await delay(Number(45) * 1000);
           voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
         if ((s4dmessage.content) == 'Saturpedia pazzamipersaturno') {
@@ -257,6 +290,7 @@
           })
           await delay(Number(45) * 1000);
           voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
         if ((s4dmessage.content) == 'Saturpedia amorizzami') {
@@ -274,10 +308,103 @@
           })
           await delay(Number(10) * 1000);
           voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+      }
+//
+//
+        if ((s4dmessage.content) == 'Saturpedia pillole') {
+          const { voice } = s4dmessage.member
+
+          if (!voice.channelID) {
+            s4dmessage.reply('Devi essere in un canale vocale 😑')
+            await delay(Number(2)*1000);
+            s4dmessage.delete();
+            return
+          }
+(s4dmessage.channel).bulkDelete((1 | 1))
+          voice.channel.join().then((connection) => {
+            connection.play(path.join(__dirname, '/reply_cmds', 'reply_8.mp3'))
+          })
+          await delay(Number(10) * 1000);
+          voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+      }
+//
+//
+        if ((s4dmessage.content) == 'Saturpedia truppe') {
+          const { voice } = s4dmessage.member
+
+          if (!voice.channelID) {
+            s4dmessage.reply('Devi essere in un canale vocale 😑')
+            await delay(Number(2)*1000);
+            s4dmessage.delete();
+            return
+          }
+(s4dmessage.channel).bulkDelete((1 | 1))
+          voice.channel.join().then((connection) => {
+            connection.play(path.join(__dirname, '/reply_cmds', 'reply_9.mp3'))
+          })
+          await delay(Number(10) * 1000);
+          voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+      }
+//
+//
+        if ((s4dmessage.content) == 'Saturpedia plutonizzami') {
+          const { voice } = s4dmessage.member
+
+          if (!voice.channelID) {
+            s4dmessage.reply('Devi essere in un canale vocale 😑')
+            await delay(Number(2)*1000);
+            s4dmessage.delete();
+            return
+          }
+(s4dmessage.channel).bulkDelete((1 | 1))
+          voice.channel.join().then((connection) => {
+            connection.play(path.join(__dirname, '/reply_cmds', 'reply10.mp3'))
+          })
+          await delay(Number(10) * 1000);
+          voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+      }
+//
+//
+        if ((s4dmessage.content) == 'Saturpedia fuoco') {
+          const { voice } = s4dmessage.member
+
+          if (!voice.channelID) {
+            s4dmessage.reply('Devi essere in un canale vocale 😑')
+            await delay(Number(2)*1000);
+            s4dmessage.delete();
+            return
+          }
+(s4dmessage.channel).bulkDelete((1 | 1))
+          voice.channel.join().then((connection) => {
+            connection.play(path.join(__dirname, '/reply_cmds', 'reply11.mp3'))
+          })
+          await delay(Number(10) * 1000);
+          voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
 //
 // Saturpedia ADMIN COMMANDS //
 //
+      if ((s4dmessage.content) == 'Saturpedia sono gay') {
+        s4dmessage.channel.send(String('E sti cazzi? 😃'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+      }
+      if ((s4dmessage.content) == 'Saturpedia sono omosessuale') {
+        s4dmessage.channel.send(String('Ah, e lo dici ad un bot.. 😃'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+      }
+      if ((s4dmessage.content) == 'Saturpedia sono eterosessuale') {
+        s4dmessage.channel.send(String('Fai coming out ad un bot? 😃'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+      }
+      if ((s4dmessage.content) == 'Saturpedia sono saturnista') {
+        s4dmessage.channel.send(String('BONOO'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+      }
       if ((s4dmessage.author.id) == '430656019949944833') {
         if ((s4dmessage.content) == 'Saturpedia! ping') {
           s4dmessage.channel.send(String((['🏓 Pong - ',s4d.client.ws.ping,' ms (millisecondi)'].join(''))));
@@ -325,40 +452,40 @@
 
       if ((s4dmessage.content) == 'Ho voglia di cazzo') {
         s4dmessage.channel.send(String('https://it.pornhub.com/gayporn'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
       if ((s4dmessage.content) == 'ho voglia di cazzo') {
         s4dmessage.channel.send(String('https://it.pornhub.com/gayporn'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
       if ((s4dmessage.content) == 'Ho voglia di figa') {
         s4dmessage.channel.send(String('https://it.pornhub.com/'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
       if ((s4dmessage.content) == 'ho voglia di figa') {
         s4dmessage.channel.send(String('https://it.pornhub.com/'));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
       }
-
 if ((s4dmessage.author.id) == '772847395922640896') {
       if ((s4dmessage.content) == 'Saturpedia fai diventare il Redolfino gay') {
         s4dmessage.channel.send(
           {
             embed: {
-              title: { text: null },
-              color: '#581845',
+              title: 'cosa?',
+              color: '#f54242',
               image: { url: null },
-              description: 'ahah no. non puoi autogayzzarti.',
+              description: 'come faccio a *stuparti* se la "vittima" (chiamasi schiavo) mi sta chiedendo di autostuprarsi? what?',
               footer: { text: null },
               thumbnail: { url: null }
 
             }
           }
-        );
-    await delay(Number(10)*1000);
-    s4dmessage.delete();
-      }
+        ).then(msg=>msg.delete({timeout:"10000"}));
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
 }
-
+}
 if ((s4dmessage.author.id) == '199874669308936192') {
       if ((s4dmessage.content) == 'Saturpedia fai diventare il Redolfino gay') {
-        s4dmessage.delete(1000);
         s4dmessage.channel.send(
           {
             embed: {
@@ -722,6 +849,7 @@ s4dmessage.channel.send(
 }
 }
       if ((s4dmessage.content) == 'A VADA CHE LONE SIA FROCIEN') {
+        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
         s4dmessage.channel.send(
           {
             embed: {
@@ -1082,7 +1210,6 @@ s4dmessage.channel.send(
     }
   }
 );
-console.log('cmds - Redolfino')
 }
 
 //--//
