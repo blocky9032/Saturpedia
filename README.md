@@ -2,7 +2,7 @@
 
 # Saturpedia 🪐, il Saturno in poche stringhe di codice 🔌
 
-> Questo è il codice sorgente del bot di discord ‘Saturpedia’. Saturpedia è nel server privato ‘Dark Side’. Token protetto. Sviluppato con il ❤️ da Saturpedia
+> Questo è il codice sorgente del bot di discord ‘Saturpedia’. Saturpedia è nel server privato ‘Dark Side’. Token protetto. Sviluppato con il ❤️ da SaturpediaDev
 
 # Indice
 
