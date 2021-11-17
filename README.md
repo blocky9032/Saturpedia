@@ -18,9 +18,9 @@
 
 ## Manutenzione 
 
-> Repl.it permette di lavorare al bot effettuando modifiche al codice senza spegnere la console, ma qualche volta potrebbe capitare che il bot vada più volte offline e online per eseguire il test dei comandi.    
+> Repl.it permette di lavorare al bot effettuando modifiche al codice senza spegnere la console, ma qualche volta potrebbe capitare che il bot vada più volte offline e online per permettermi di eseguire il test dei comandi nuovi/sistemati.    
 
-> Repl.it fornisce una pagina dedicata allo stato di Saturpedia che potete trovare qui: https://Saturpedia.saturpediadev.repl.co/ (⁴)
+> Repl.it fornisce una pagina dedicata allo stato del bot Saturpedia che potete trovare qui: https://Saturpedia.saturpediadev.repl.co/ (⁴).
 
 ## Risorse
 
