@@ -2,6 +2,20 @@
 
 # Saturpedia 🪐, il Saturno in poche stringhe di codice 🔌
 
+<p align="center">
+<a href="https://github.com/dap342/Saturpedia" target="blank">
+<img src="https://img.shields.io/github/issues/dap342/Saturpedia?style=plastic" alt="bug_saturpedia" />
+</a>
+
+<a href="https://github.com/dap342/Saturpedia" target="blank">
+<img src="https://img.shields.io/uptimerobot/status/m789456946-cd2bfcf15727c28bf1061497?style=plastic" alt="stato_saturpedia" />
+</a>
+
+<a href="https://github.com/dap342/Saturpedia" target="blank">
+<img src="https://img.shields.io/uptimerobot/ratio/m789456946-cd2bfcf15727c28bf1061497?style=plastic" alt="stato_tot_saturpedia" />
+</a>
+
+
 > Questo è il codice sorgente del bot di discord ‘Saturpedia’. Saturpedia è nel server privato ‘Dark Side’. Token protetto. Sviluppato con il ❤️ da SaturpediaDev
 
 # Indice
