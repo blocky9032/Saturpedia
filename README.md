@@ -2,7 +2,21 @@
 
 # Saturpedia 🪐, il Saturno in poche stringhe di codice 🔌
 
-> Questo è il codice sorgente del bot di discord ‘Saturpedia’. Saturpedia è nel server privato ‘Dark Side’. Token protetto. Sviluppato con il ❤️ da Saturpedia
+<p align="center">
+<a href="https://github.com/dap342/Saturpedia" target="blank">
+<img src="https://img.shields.io/github/issues/dap342/Saturpedia?style=plastic" alt="bug_saturpedia" />
+</a>
+
+<a href="https://github.com/dap342/Saturpedia" target="blank">
+<img src="https://img.shields.io/uptimerobot/status/m789456946-cd2bfcf15727c28bf1061497?style=plastic" alt="stato_saturpedia" />
+</a>
+
+<a href="https://github.com/dap342/Saturpedia" target="blank">
+<img src="https://img.shields.io/uptimerobot/ratio/m789456946-cd2bfcf15727c28bf1061497?style=plastic" alt="stato_tot_saturpedia" />
+</a>
+
+
+> Questo è il codice sorgente del bot di discord ‘Saturpedia’. Saturpedia è nel server privato ‘Dark Side’. Token protetto. Sviluppato con il ❤️ da SaturpediaDev
 
 # Indice
 
@@ -18,9 +32,9 @@
 
 ## Manutenzione 
 
-> Repl.it permette di lavorare al bot effettuando modifiche al codice senza spegnere la console, ma qualche volta potrebbe capitare che il bot vada più volte offline e online per eseguire il test dei comandi.    
+> Repl.it permette di lavorare al bot effettuando modifiche al codice senza spegnere la console, ma qualche volta potrebbe capitare che il bot vada più volte offline e online per permettermi di eseguire il test dei comandi nuovi/sistemati.    
 
-> Repl.it fornisce una pagina dedicata allo stato di Saturpedia che potete trovare qui: https://Saturpedia.saturpediadev.repl.co/ (⁴)
+> Repl.it fornisce una pagina dedicata allo stato del bot Saturpedia che potete trovare qui: https://Saturpedia.saturpediadev.repl.co/ (⁴).
 
 ## Risorse
 
