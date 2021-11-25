@@ -11,7 +11,15 @@
 
 //--//
 (async () => {
-  let datetimeitIT = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' });
+  let ts = Date.now();
+  let date_ob = new Date(ts);
+  let date = date_ob.getDate();
+  let month = date_ob.getMonth() + 1;
+  let year = date_ob.getFullYear();
+  let hours = date_ob.getHours();
+  let minutes = date_ob.getMinutes();
+  let seconds = date_ob.getSeconds();
+  console.log("Bot startato o svegliato in data " + year + "-" + month + "-" + date + " alle "+ Math.floor(hours+1) + ":" + minutes);
   const keepAlive = require("./server.js")
   const Discord = require("discord.js");
   const Database = require("easy-json-database");
@@ -48,7 +56,6 @@
     (async () => {
 //--//
 
-
 //--//
 //
 // Saturpedia HELP COMMAND //
@@ -74,114 +81,114 @@
             }
           }
         );
-console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
 // Saturpedia COMMANDS //
 //
       if ((s4dmessage.content) == 'Saturpedia cosa fai?') {
         s4dmessage.channel.send(String('Rispondo ai comandi.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia quanti anni hai?') {
-        s4dmessage.channel.send(String('Non posso dirlo con certezza dato che non so riconoscere l\'orario umano, ma posso dire che sono "nato" da poco.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        s4dmessage.channel.send(String('Ho 1 anno..'));
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia come ti chiami?') {
         s4dmessage.channel.send(String('Sei serio?'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei maschio o femmina?') {
         s4dmessage.channel.send(String('Non possiedo un vero e proprio sesso, ma mi definisco un "bot maschio".'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei eterosessuale?') {
         s4dmessage.channel.send(String('Ma ti rendi conto che lo stai chiedendo ad un bot si?'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei omosessuale?') {
         s4dmessage.channel.send(String('Io non...'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei inutile') {
         s4dmessage.channel.send(String('Mai quanto la tua esistenza.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei uno stronzo') {
         s4dmessage.channel.send(String('Non immaginavo che le tue feci avessero dei processori di ultima generazione, o almeno, uscite dal tuo corpo in decomposizione...'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei un bastardo') {
         s4dmessage.channel.send(String('Non mi risulta che sia la tua copia.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei in mezzo alle palle') {
         s4dmessage.channel.send(String('Allora non chiamarmi se non vuoi che ti sia in mezzo alle palle.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei ritardato') {
         s4dmessage.channel.send(String('Ho solo 4 ms di ping, non sono così ritardato.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei un aborto') {
         s4dmessage.channel.send(String('Se ti guardi allo specchio potrai vedere il vero aborto che ha dovuto creare tua madre.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia sei sempre in mezzo ai coglioni') {
         s4dmessage.channel.send(String('Non chiamarmi, easy peasy lemon squeeze.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia ti hanno pensato male') {
         s4dmessage.channel.send(String('In realtà non condivido questo questo punto di vista, sono solo stato creato per essere insultato da gente SENZA CERVELLO come te.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia ti stermino') {
         s4dmessage.channel.send(String('Ma non farmi ridere 😂'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia ti hanno sviluppato male') {
         s4dmessage.channel.send(String('Sei tu quello che non funziona di testa.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia non lavori abbastanza') {
         s4dmessage.channel.send(String('Non sei il mio capo, solo Blocky e L\'imperatore può sgridarmi.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia non dovevi nascere') {
         s4dmessage.channel.send(String('Peccato che sono stato creato, non sono nato storto, a differenza tua.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia fai cagare') {
         s4dmessage.channel.send(String('Speriamo ti aiuti con la tua stitichezza.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia fai cagare al cazzo') {
         s4dmessage.channel.send(String('Mai quanto te.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
       if ((s4dmessage.content) == 'Saturpedia fai schifo') {
         s4dmessage.channel.send(String('A differenza tua non sono ammuffito.'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
 // Saturpedia AUDIO COMMANDS //
@@ -195,7 +202,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           //}
           voice.channel.leave()
           s4dmessage.reply('Okay')
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
         if ((s4dmessage.content) == 'Saturpedia insultami') {
@@ -211,7 +218,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           })
           await delay(Number(7) * 1000);
           voice.channel.leave()
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
         if ((s4dmessage.content) == 'Saturpedia errorizzami') {
@@ -228,7 +235,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           await delay(Number(4) * 1000);
           voice.channel.leave()
           //s4dmessage.reply('Non ho ancora degli script che mi permettano di pensare, scusa 😪')
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
         if ((s4dmessage.content) == 'Saturpedia stellarizzami un pò') {
@@ -242,7 +249,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           voice.channel.join().then((connection) => {
             connection.play(path.join(__dirname, '/reply_cmds', 'reply_3.mp3'))
           })
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
         if ((s4dmessage.content) == 'Saturpedia cosa pensi di bello?') {
@@ -258,7 +265,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           })
           await delay(Number(21) * 1000);
           voice.channel.leave()
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
         if ((s4dmessage.content) == 'Saturpedia pazzamipergesu') {
@@ -274,7 +281,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           })
           await delay(Number(45) * 1000);
           voice.channel.leave()
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
         if ((s4dmessage.content) == 'Saturpedia pazzamipersaturno') {
@@ -290,7 +297,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           })
           await delay(Number(45) * 1000);
           voice.channel.leave()
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
         if ((s4dmessage.content) == 'Saturpedia amorizzami') {
@@ -308,7 +315,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           })
           await delay(Number(10) * 1000);
           voice.channel.leave()
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
 //
@@ -327,7 +334,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           })
           await delay(Number(10) * 1000);
           voice.channel.leave()
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
 //
@@ -346,7 +353,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           })
           await delay(Number(10) * 1000);
           voice.channel.leave()
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
 //
@@ -365,7 +372,7 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           })
           await delay(Number(10) * 1000);
           voice.channel.leave()
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
 //
@@ -384,26 +391,45 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
           })
           await delay(Number(10) * 1000);
           voice.channel.leave()
-          console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
+      }
+//
+//
+        if ((s4dmessage.content) == 'Saturpedia conciez') {
+          const { voice } = s4dmessage.member
+
+          if (!voice.channelID) {
+            s4dmessage.reply('Devi essere in un canale vocale 😑')
+            await delay(Number(2)*1000);
+            s4dmessage.delete();
+            return
+          }
+(s4dmessage.channel).bulkDelete((1 | 1))
+          voice.channel.join().then((connection) => {
+            connection.play(path.join(__dirname, '/reply_cmds', 'reply12.mp3'))
+          })
+          await delay(Number(7) * 1000);
+          voice.channel.leave()
+          console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 //
 // Saturpedia ADMIN COMMANDS //
 //
       if ((s4dmessage.content) == 'Saturpedia sono gay') {
         s4dmessage.channel.send(String('E sti cazzi? 😃'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
       if ((s4dmessage.content) == 'Saturpedia sono omosessuale') {
         s4dmessage.channel.send(String('Ah, e lo dici ad un bot.. 😃'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
       if ((s4dmessage.content) == 'Saturpedia sono eterosessuale') {
         s4dmessage.channel.send(String('Fai coming out ad un bot? 😃'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
       if ((s4dmessage.content) == 'Saturpedia sono saturnista') {
         s4dmessage.channel.send(String('BONOO'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
       if ((s4dmessage.author.id) == '430656019949944833') {
         if ((s4dmessage.content) == 'Saturpedia! ping') {
@@ -452,19 +478,19 @@ console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
 
       if ((s4dmessage.content) == 'Ho voglia di cazzo') {
         s4dmessage.channel.send(String('https://it.pornhub.com/gayporn'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
       if ((s4dmessage.content) == 'ho voglia di cazzo') {
         s4dmessage.channel.send(String('https://it.pornhub.com/gayporn'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
       if ((s4dmessage.content) == 'Ho voglia di figa') {
         s4dmessage.channel.send(String('https://it.pornhub.com/'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
       if ((s4dmessage.content) == 'ho voglia di figa') {
         s4dmessage.channel.send(String('https://it.pornhub.com/'));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
       }
 if ((s4dmessage.author.id) == '772847395922640896') {
       if ((s4dmessage.content) == 'Saturpedia fai diventare il Redolfino gay') {
@@ -481,7 +507,7 @@ if ((s4dmessage.author.id) == '772847395922640896') {
             }
           }
         ).then(msg=>msg.delete({timeout:"10000"}));
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
+        console.log('Un comando è stato eseguito senza errori.', Math.floor(ts*1000))
 }
 }
 if ((s4dmessage.author.id) == '199874669308936192') {
@@ -489,7 +515,7 @@ if ((s4dmessage.author.id) == '199874669308936192') {
         s4dmessage.channel.send(
           {
             embed: {
-              title: 'Attenzione! Non inviare alcun messaggio durante questa operazione delicata!',
+              title: 'Attenzione! In avvio il processo di gayismo su Redolfino!',
               color: '#f54242',
               image: { url: null },
               description: '**In avvio tra 10 secondi...**',
@@ -498,10 +524,8 @@ if ((s4dmessage.author.id) == '199874669308936192') {
 
             }
           }
-        );
-        await delay(Number(10) * 1000);
-        (s4dmessage.channel).bulkDelete((1 | 1))
-      
+        ).then(msg=>msg.delete({timeout:Number(10) * 1000}));
+		await delay(Number(10) * 1000);
       s4dmessage.channel.send(
         {
           embed: {
@@ -514,9 +538,8 @@ if ((s4dmessage.author.id) == '199874669308936192') {
 
           }
         }
-      );
-      await delay(Number(2) * 1000);
-      (s4dmessage.channel).bulkDelete((1 | 1))
+      ).then(msg=>msg.delete({timeout:Number(5) * 1000}));
+      await delay(Number(5) * 1000);
     s4dmessage.channel.send(
       {
         embed: {
@@ -529,10 +552,8 @@ if ((s4dmessage.author.id) == '199874669308936192') {
 
         }
       }
-    );
-    await delay(Number(7) * 1000);
-    (s4dmessage.channel).bulkDelete((1 | 1))
-
+    ).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
     s4dmessage.channel.send(
     {
       embed: {
@@ -545,9 +566,8 @@ if ((s4dmessage.author.id) == '199874669308936192') {
 
       }
     }
-  );
-  await delay(Number(3) * 1000);
-  (s4dmessage.channel).bulkDelete((1 | 1))
+  ).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+  await delay(Number(2) * 1000);
     s4dmessage.channel.send(
   {
     embed: {
@@ -560,9 +580,8 @@ if ((s4dmessage.author.id) == '199874669308936192') {
 
     }
   }
-);
-await delay(Number(1) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -575,9 +594,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(1) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -590,9 +608,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(3) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -605,9 +622,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
+).then(msg=>msg.delete({timeout:Number(5) * 1000}));
 await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
 s4dmessage.channel.send(
   {
     embed: {
@@ -620,9 +636,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -635,9 +650,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
 await delay(Number(2) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
 s4dmessage.channel.send(
   {
     embed: {
@@ -650,9 +664,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(9) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -665,9 +678,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(1) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -680,9 +692,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(8) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -695,9 +706,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(6) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -710,9 +720,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(3) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -725,9 +734,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
+).then(msg=>msg.delete({timeout:Number(5) * 1000}));
 await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
 s4dmessage.channel.send(
   {
     embed: {
@@ -740,9 +748,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
+).then(msg=>msg.delete({timeout:Number(5) * 1000}));
 await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
 s4dmessage.channel.send(
   {
     embed: {
@@ -755,9 +762,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -770,9 +776,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(8) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -785,9 +790,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(6) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -800,9 +804,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(4) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -815,9 +818,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(3) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -830,9 +832,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
-await delay(Number(7) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
+).then(msg=>msg.delete({timeout:Number(2) * 1000}));
+await delay(Number(2) * 1000);
 s4dmessage.channel.send(
   {
     embed: {
@@ -845,371 +846,8 @@ s4dmessage.channel.send(
 
     }
   }
-);
+).then(msg=>msg.delete({timeout:Number(120) * 1000}));
 }
-}
-      if ((s4dmessage.content) == 'A VADA CHE LONE SIA FROCIEN') {
-        console.log('Un comando è stato eseguito senza errori.', datetimeitIT)
-        s4dmessage.channel.send(
-          {
-            embed: {
-              title: 'Attenzione! Non inviare alcun messaggio durante questa operazione delicata!',
-              color: '#f54242',
-              image: { url: null },
-              description: '**In avvio tra 10 secondi...**',
-              footer: { text: null },
-              thumbnail: { url: null }
-
-            }
-          }
-        );
-        await delay(Number(10) * 1000);
-        (s4dmessage.channel).bulkDelete((1 | 1))
-      
-      s4dmessage.channel.send(
-        {
-          embed: {
-            title: 'PREPARAZIONE - FASE 1/2',
-            color: '#f54242',
-            image: { url: null },
-            description: '**Avvio...**',
-            footer: { text: null },
-            thumbnail: { url: null }
-
-          }
-        }
-      );
-      await delay(Number(2) * 1000);
-      (s4dmessage.channel).bulkDelete((1 | 1))
-    s4dmessage.channel.send(
-      {
-        embed: {
-          title: 'PREPARAZIONE - FASE 1/2',
-          color: '#f54242',
-          image: { url: null },
-          description: '**Estrazione della vittima...** `1%`',
-          footer: { text: null },
-          thumbnail: { url: null }
-
-        }
-      }
-    );
-    await delay(Number(7) * 1000);
-    (s4dmessage.channel).bulkDelete((1 | 1))
-
-    s4dmessage.channel.send(
-    {
-      embed: {
-        title: 'PREPARAZIONE - FASE 1/2',
-        color: '#f54242',
-        image: { url: null },
-        description: '**Estrazione della vittima...** `33%`',
-        footer: { text: null },
-        thumbnail: { url: null }
-
-      }
-    }
-  );
-  await delay(Number(3) * 1000);
-  (s4dmessage.channel).bulkDelete((1 | 1))
-    s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 1/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Estrazione della vittima...** `50%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(1) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 1/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Estrazione della vittima...** `69%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(1) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 1/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Estrazione della vittima...** `100%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(3) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 2/2',
-      color: '#f54242',
-      image: { url: null },
-      description: 'Fase 1 completata.',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 2/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Denudazione della vittima...** `1%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 2/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Denudazione della vittima...** `5%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(2) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 2/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Denudazione della vittima...** `23%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(9) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 2/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Denudazione della vittima...** `56%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(1) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 2/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Denudazione della vittima...** `69%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(8) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 2/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Denudazione della vittima...** `79%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(6) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 2/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Denudazione della vittima...** `100%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(3) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'PREPARAZIONE - FASE 2/2',
-      color: '#f54242',
-      image: { url: null },
-      description: 'Fase 2 completata.',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'ESECUZIONE - FASE 1/2',
-      color: '#f54242',
-      image: { url: null },
-      description: '**Veloce backup di Lone...** `Nuovo punto di rispristino creato`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'ESECUZIONE - FASE 2/2',
-      color: '#40ff00',
-      image: { url: null },
-      description: '**Ignezione di "Gayismo2021"...** `1%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(5) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'ESECUZIONE - FASE 2/2',
-      color: '#40ff00',
-      image: { url: null },
-      description: '**Ignezione di "Gayismo2021"...** `2%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(8) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'ESECUZIONE - FASE 2/2',
-      color: '#40ff00',
-      image: { url: null },
-      description: '**Ignezione di "Gayismo2021"...** `15%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(6) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'ESECUZIONE - FASE 2/2',
-      color: '#40ff00',
-      image: { url: null },
-      description: '**Ignezione di "Gayismo2021"...** `39%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(4) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'ESECUZIONE - FASE 2/2',
-      color: '#40ff00',
-      image: { url: null },
-      description: '**Ignezione di "Gayismo2021"...** `69%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(3) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'ESECUZIONE - FASE 2/2',
-      color: '#40ff00',
-      image: { url: null },
-      description: '**Ignezione di "Gayismo2021"...** `100%`',
-      footer: { text: null },
-      thumbnail: { url: null }
-
-    }
-  }
-);
-await delay(Number(7) * 1000);
-(s4dmessage.channel).bulkDelete((1 | 1))
-s4dmessage.channel.send(
-  {
-    embed: {
-      title: 'Finished',
-      color: '#9d00ff',
-      image: { url: null },
-      description: '**Lone è ora gay**',
-      footer: { text: null },
-      thumbnail: { url: "https://cdn.discordapp.com/attachments/785284163007414322/857202010725679114/gay.png" }
-
-    }
-  }
-);
 }
 
 //--//
